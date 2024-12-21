@@ -13,7 +13,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -127,6 +134,15 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        mouse {
+            if-layers = <0>;
+            then-layer = <5>;
         };
     };
 };
