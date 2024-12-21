@@ -22,6 +22,17 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        horipu: horipu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F15>,
+                <&macro_press>,
+                <&kp H &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
+
+            label = "HORIPU";
+        };
     };
 
     behaviors {
@@ -48,10 +59,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E         &kp R         &kp T                                         &kp Y            &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S             &kp D         &kp F         &kp G        &trans             &kp EXCL      &kp H            &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V         &kp B        &lt 4 COLON        &kp QUESTION  &kp N            &kp M  &kp COMMA  &kp DOT  &kp RIGHT_SHIFT
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LC(SPACE)    &kp ENTER     &lt 1 BACKSPACE                             &to 2
+&kp Q             &kp W             &kp E         &kp R         &kp T                                         &kp Y                    &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S             &kp D         &kp F         &kp G        &trans             &kp EXCL      &kp H                    &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V         &kp B        &kp F15            &kp QUESTION  &kp N                    &kp M  &kp COMMA  &kp DOT  &kp RIGHT_SHIFT
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 SPACE  &lt 3 LC(SPACE)    &kp ENTER     &mt BACKSPACE BACKSPACE                             &to 2
             >;
 
             sensor-bindings = <&scroll_up_down>;
