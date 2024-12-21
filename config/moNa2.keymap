@@ -28,9 +28,16 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(H) &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
+                <&kp H &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
 
             label = "HORIPU";
+        };
+
+        Horipu0811: Horipu0811 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(H) &kp O &kp R &kp I &kp P &kp U &kp N0 &kp N8 &kp N1 &kp N1>;
+            label = "HORIPU0811";
         };
     };
 
@@ -58,10 +65,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E         &kp R               &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp Q             &kp W             &kp E         &kp R               &kp T                                                    &kp Y        &kp U  &lt 4 I    &kp O    &kp P
 &kp A             &kp S             &kp D         &kp F               &kp G        &trans             &kp EXCL                 &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V               &kp B        &kp LC(SPACE)      &kp QUESTION             &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LC(QUESTION)
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_WIN ENTER  &lt 2 SPACE  &lt 3 BACKSPACE    &mt BACKSPACE BACKSPACE  &lt 2 ENTER                             &to 2
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_WIN ENTER  &lt 1 SPACE  &lt 2 BACKSPACE    &mt BACKSPACE BACKSPACE  &lt 1 ENTER                             &to 1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -69,10 +76,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&kp ESC                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                            &kp RA(RC(D))          &kp RA(RC(E))   &kp RA(RC(F))   &kp RA(RC(T))    &kp RA(RC(G))
+&kp INT_YEN                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &trans          &kp LC(LEFT_ARROW)       &kp LEFT_PARENTHESIS   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp TILDE
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp AT          &kp LC(RIGHT_ARROW)      &kp RIGHT_PARENTHESIS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
+&kp LC(UP_ARROW)            &kp KP_N0        &kp PERIOD       &kp LEFT_WIN     &kp SPACE  &kp LEFT_ALT    &mt BACKSPACE BACKSPACE  &kp ENTER                                                               &to 0
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -80,21 +87,10 @@
 
         layer_2 {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                 &kp CARET             &kp AMPERSAND          &kp APOS  &trans  &trans
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE  &kp EXCLAMATION       &kp AT_SIGN            &kp HASH  &trans  &kp TILDE
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp AT        &kp EQUAL                  &trans          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans
-&trans                      &kp KP_N0        &trans           &trans           &trans        &trans                     &trans          &trans                                                         &to 0
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
-
-        layer_3 {
-            bindings = <
-&kp EXCL        &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                            &kp LA(LC(D))  &kp LA(LC(E))   &kp LC(LA(F))   &kp LC(LA(T))    &kp LC(LA(G))
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans     &trans        &kp PAGE_UP    &trans          &kp UP_ARROW    &trans           &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &horipu    &trans        &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans     &bt BT_SEL 0  &bt BT_SEL 1                                                    &trans
+&trans          &trans  &trans  &kp LG(F10)  &kp LS(LA(LG(SEMI)))                          &kp LA(LC(D))  &kp LA(LC(E))  &kp LC(LA(F))  &kp LC(LA(T))  &kp LC(LA(G))
+&trans          &trans  &trans  &trans       &kp LS(LA(LG(N0)))    &trans    &trans        &trans         &trans         &trans         &trans         &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans       &trans                &trans    &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &trans
+&trans          &trans  &trans  &Horipu0811  &horipu               &trans    &trans        &trans                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
