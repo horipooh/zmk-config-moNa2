@@ -33,8 +33,7 @@
         horipu: horipu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp H &kp O &kp R &kp I &kp P &kp U>;
-
+            bindings = <&kp H &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
             label = "HORIPU";
         };
 
