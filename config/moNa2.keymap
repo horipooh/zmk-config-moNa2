@@ -35,7 +35,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp H &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
+                <&kp H &kp O &kp R &kp I &kp P &kp U &kp RET>;
 
             label = "HORIPU";
         };
