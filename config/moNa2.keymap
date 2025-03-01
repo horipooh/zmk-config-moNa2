@@ -35,7 +35,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp H &kp O &kp R &kp I &kp P &kp U &kp KP_ENTER>;
+                <&kp H &kp O &kp R &kp I &kp P &kp U &kp ENTER>;
 
             label = "HORIPU";
         };
@@ -82,7 +82,7 @@
 &kp Q             &kp W             &kp E         &kp R                    &kp T                                          &kp Y                    &kp U  &lt 6 I    &kp O    &kp P
 &kp A             &kp S             &kp D         &kp F                    &kp G        &trans              &kp MINUS     &kp H                    &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                    &kp B        &kp EXCLAMATION     &kp QUESTION  &kp N                    &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_WIN LANGUAGE_1  &lt 1 SPACE  &lt 2 LANGUAGE_2    &lt 1 ENTER   &mt BACKSPACE BACKSPACE                             &kp QUESTION
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_WIN LANGUAGE_1  &lt 1 SPACE  &lt 2 LANGUAGE_2    &lt 1 ENTER   &mt BACKSPACE BACKSPACE                             &to 1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -90,10 +90,10 @@
 
         layer_1 {
             bindings = <
-&kp ESC                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                            &kp RA(RC(D))          &kp RA(RC(E))   &kp RA(RC(F))   &kp RA(RC(T))    &kp RA(RC(G))
-&kp INT_YEN                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &trans          &kp LC(LEFT_ARROW)       &kp LEFT_PARENTHESIS   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp TILDE
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp AT          &kp LC(RIGHT_ARROW)      &kp RIGHT_PARENTHESIS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
-&kp LC(UP_ARROW)            &kp KP_N0        &kp PERIOD       &kp LEFT_WIN     &kp SPACE  &kp LEFT_ALT    &mt BACKSPACE BACKSPACE  &kp ENTER                                                               &to 0
+&kp ESC                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                              &kp RA(RC(D))            &kp RA(RC(E))   &kp RA(RC(F))   &kp RA(RC(T))    &kp RA(RC(G))
+&kp INT_YEN                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &trans          &kp TILDE  &kp LEFT_PARENTHESIS     &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp ENTER
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp AT          &kp UNDER  &kp RIGHT_PARENTHESIS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp UNDERSCORE
+&kp LC(UP_ARROW)            &kp KP_N0        &kp PERIOD       &kp LEFT_WIN     &kp SPACE  &kp LEFT_ALT    &kp ENTER  &mt BACKSPACE BACKSPACE                                                   &to 0
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -101,10 +101,10 @@
 
         layer_2 {
             bindings = <
-&trans          &trans  &trans         &kp LG(F10)  &kp LS(LA(LG(SEMI)))                                  &kp LA(LC(D))  &kp LA(LC(E))           &kp LC(LA(F))      &kp LC(LA(T))            &kp LC(LA(G))
-&trans          &trans  &trans         &trans       &kp LS(LA(LG(N0)))    &trans                  &trans  &trans         &kp RA(RC(LEFT_ARROW))  &kp RC(RA(ENTER))  &kp RC(RA(RIGHT_ARROW))  &trans
-&kp LEFT_SHIFT  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LG(LS(NUMBER_4))    &trans  &bt BT_SEL 0   &bt BT_SEL 1            &bt BT_SEL 2       &bt BT_SEL 3             &bt BT_SEL 4
-&trans          &trans  &trans         &trans       &trans                &trans                  &trans  &trans                                                                             &trans
+&trans          &trans  &trans         &kp LG(F10)  &kp LS(LA(LG(SEMI)))                                              &kp LA(LC(D))        &kp LA(LC(E))           &kp LC(LA(F))      &kp LC(LA(T))            &kp LC(LA(G))
+&trans          &trans  &trans         &trans       &kp LS(LA(LG(N0)))    &trans                  &trans              &trans               &kp RA(RC(LEFT_ARROW))  &kp RC(RA(ENTER))  &kp RC(RA(RIGHT_ARROW))  &trans
+&kp LEFT_SHIFT  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LG(LS(NUMBER_4))    &kp LC(UP_ARROW)    &bt BT_SEL 0         &bt BT_SEL 1            &bt BT_SEL 2       &bt BT_SEL 3             &bt BT_SEL 4
+&trans          &trans  &trans         &trans       &trans                &trans                  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)                                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -114,8 +114,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp N0                                                  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
