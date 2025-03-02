@@ -78,7 +78,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W             &kp E         &kp R                    &kp T                                          &kp Y                    &kp U  &lt 6 I    &kp O    &kp P
-&kp A             &kp S             &kp D         &kp F                    &kp G        &trans              &kp MINUS     &kp H                    &kp J  &kp K      &kp L    &kp ENTER
+&kp A             &kp S             &kp D         &kp F                    &kp G        &trans              &kp MINUS     &kp H                    &kp J  &lt 2 K    &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                    &kp B        &kp EXCLAMATION     &kp QUESTION  &kp N                    &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_WIN LANGUAGE_1  &lt 1 SPACE  &lt 2 LANGUAGE_2    &lt 1 ENTER   &mt BACKSPACE BACKSPACE                             &to 1
             >;
@@ -97,7 +97,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_2 {
+        SCROLL {
             bindings = <
 &trans          &trans  &trans         &kp LG(F10)  &kp LS(LA(LG(SEMI)))                                              &kp LA(LC(D))        &kp LA(LC(E))           &kp LC(LA(F))      &kp LC(LA(T))            &kp LC(LA(G))
 &trans          &trans  &trans         &trans       &kp LS(LA(LG(N0)))    &trans                  &trans              &trans               &kp RA(RC(LEFT_ARROW))  &kp RC(RA(ENTER))  &kp RC(RA(RIGHT_ARROW))  &trans
