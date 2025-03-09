@@ -98,10 +98,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans         &kp LG(F10)  &kp LS(LA(LG(SEMI)))                                  &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2        &bt BT_SEL 3         &bt BT_SEL 4
-&trans  &trans  &trans         &trans       &kp LS(LA(LG(N0)))    &trans                  &trans  &trans        &trans              &kp LC(UP_ARROW)    &trans               &trans
-&trans  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LG(LS(NUMBER_4))    &trans  &trans        &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
-&trans  &trans  &trans         &trans       &kp SPACE             &trans                  &trans  &trans                                                                     &trans
+&trans  &trans  &trans         &kp LG(F10)  &kp LS(LA(LG(SEMI)))                                  &kp LA(LC(D))  &kp LA(LC(E))       &kp LA(LC(F))       &kp LC(LA(T))        &kp LC(LA(G))
+&trans  &trans  &trans         &trans       &kp LS(LA(LG(N0)))    &trans                  &trans  &trans         &mkp MB1            &kp LC(UP_ARROW)    &mkp MB2             &trans
+&trans  &trans  &Horipu630811  &Horipu0811  &horipu               &kp LG(LS(NUMBER_4))    &trans  &trans         &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
+&trans  &trans  &trans         &trans       &kp SPACE             &trans                  &trans  &to 4                                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -120,10 +120,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                  &trans
             >;
         };
 
