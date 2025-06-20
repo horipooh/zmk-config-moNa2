@@ -93,7 +93,7 @@
 &kp EQUAL       &kp N0        &kp DOT       &kp LEFT_WIN  &kp SPACE  &kp LEFT_ALT    &kp ENTER  &mt BACKSPACE BACKSPACE                                                   &to 0
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         SCROLL {
