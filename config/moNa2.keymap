@@ -104,7 +104,7 @@
 &trans  &trans  &trans         &trans       &kp SPACE             &trans                  &trans  &to 4                                                                       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         layer_4 {
