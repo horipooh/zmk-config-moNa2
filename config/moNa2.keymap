@@ -69,6 +69,13 @@
 
             tap-ms = <20>;
         };
+
+        zoom: zoom {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ZOOM";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_AC_ZOOM_IN>, <&kp C_AC_ZOOM_OUT>;
+        };
     };
 
     keymap {
@@ -104,7 +111,7 @@
 &trans  &trans  &trans         &trans       &kp SPACE             &trans                  &trans  &to 4                                                                       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+            sensor-bindings = <&zoom>;
         };
 
         layer_4 {
